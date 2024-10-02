@@ -1,0 +1,45 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+
+.bg-container {
+    background: url('https://media.giphy.com/media/7pUWCsRkP0IxP5D4u2/giphy.gif') no-repeat center center fixed; /* Use o link do GIF aqui */
+    background-size: cover; /* Faz o GIF cobrir toda a área */
+}
+
+.countdown-timer {
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative; /* Para que a sombra fique visível */
+    z-index: 1; /* Garante que a contagem regressiva fique acima do fundo */
+}
+
+h1 {
+    font-family: 'Arial', sans-serif;
+    color: #6b5b95;
+}
+
+.display-4 {
+    font-size: 3em;
+    color: #f81905;
+    font-weight: bold;
+}
+
+.butterfly {
+    animation: flutter 3s infinite alternate;
+    position: absolute;
+    width: 50px; /* Tamanho da borboleta */
+    top: 10%; /* Posição inicial vertical */
+    left: 50%; /* Posição inicial horizontal */
+    transform: translate(-50%, -50%); /* Centraliza a borboleta */
+}
+
+@keyframes flutter {
+    0% { transform: translate(-50%, -50%) translateY(0); }
+    50% { transform: translate(-50%, -50%) translateY(-10px); }
+    100% { transform: translate(-50%, -50%) translateY(0); }
+}
